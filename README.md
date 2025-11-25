@@ -44,9 +44,10 @@ The script sends a technical query ("Explain PWM for servo motors") to both mode
 *   Inference Latency (Time to generate response)
 *   Response Quality
 
-### 📂 Files
+### 📂 Files 
 *   `compare_models.py`: The Python orchestration script.
 *   `results.txt`: The raw output logs from the benchmark.
+*   `requirements.txt`
 
 ### 📊 Results & Analysis
 Running on a MacBook Pro (Apple Silicon), the benchmark yielded significant differences:
