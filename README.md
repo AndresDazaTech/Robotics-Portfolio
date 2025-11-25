@@ -62,4 +62,4 @@ For an offline robotics assistant running on this specific edge hardware, **Llam
 
 ### 💻 How to Run
 1.  Install Ollama: `pip install ollama`
-2.  Run script: `python compare_models.py`
+2.  Run script: `python3 compare_models.py`
