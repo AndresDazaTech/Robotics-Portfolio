@@ -32,37 +32,33 @@ The setup process utilized the official documentation and community guides:
 
 ## Project 2: Final
 
-## 📄 Local LLM Inference & Comparison
-This project demonstrates the implementation of local Large Language Model (LLM) inference using **Ollama**. The goal was to compare the performance and output quality of Google's **Gemma 3** and Meta's **Llama 3.2** when running offline on local hardware.
+### 📄 Local LLM Inference & Comparison
+This project implements a local inference engine using **Ollama** to run Large Language Models (LLMs) offline. The goal was to benchmark different models to see which is most efficient for a robotics assistant (specifically for Picar X technical support).
 
-This approach is critical for "Edge AI" applications where data privacy is required or internet connectivity is unavailable.
+### 🔍 The Experiment
+I compared two state-of-the-art small language models:
+1.  **Gemma 3** (Google)
+2.  **Llama 3.2** (Meta)
 
-## 🛠 Tech Stack
-*   **Engine:** Ollama (Local Inference Server)
-*   **Models:** 
-    *   `gemma3:latest`
-    *   `llama3.2:latest`
-*   **Language:** Python 3.10+
-*   **Library:** `ollama` (Python bindings)
+The script sends a technical query ("Explain PWM for servo motors") to both models and measures:
+*   Inference Latency (Time to generate response)
+*   Response Quality
 
-## 🚀 How to Run
-1.  Ensure Ollama is installed and running.
-2.  Pull the required models:
-    ```bash
-    ollama pull gemma3
-    ollama pull llama3.2
-    ```
-3.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-4.  Run the comparison script:
-    ```bash
-    python compare_models.py
-    ```
+### 📂 Files
+*   `compare_models.py`: The Python orchestration script.
+*   `results.txt`: The raw output logs from the benchmark.
 
-## 📊 Sample Output
-The script sends a technical robotics query regarding PWM (Pulse Width Modulation) to both models.
+### 📊 Results & Analysis
+Running on a MacBook Pro (Apple Silicon), the benchmark yielded significant differences:
 
-*   **Gemma 3:** Provided a concise, technical explanation focusing on duty cycles. (Inference time: 1.2s)
-*   **Llama 3.2:** Provided a more conversational explanation with examples of servo wiring. (Inference time: 1.5s)
+| Model | Time (Seconds) | Observations |
+| :--- | :--- | :--- |
+| **Llama 3.2** | **12.59s** | **Winner.** Highly efficient and fast. Ideal for real-time robotics queries. |
+| **Gemma 3** | 56.80s | Slower inference time, likely more computationally heavy for this specific hardware setup. |
+
+### 🚀 Conclusion
+For an offline robotics assistant running on this specific edge hardware, **Llama 3.2 is the superior choice** due to its 4.5x speed advantage while maintaining high accuracy on technical concepts.
+
+### 💻 How to Run
+1.  Install Ollama: `pip install ollama`
+2.  Run script: `python compare_models.py`
