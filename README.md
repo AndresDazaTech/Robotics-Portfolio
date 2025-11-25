@@ -27,4 +27,4 @@ The setup process utilized the official documentation and community guides:
 *   Successfully established SSH connection to the robot.
 *   Verified movement controls (forward, backward, steering).
 *   Validated camera feed streaming.
-*   ![My Picar X](Downloads/IMG_6796.HEIC)
+*   ![My Picar X](IMG_6796.HEIC)
