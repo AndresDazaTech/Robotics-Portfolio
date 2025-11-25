@@ -32,7 +32,7 @@ The setup process utilized the official documentation and community guides:
 
 ## Project 2: Final
 
-## 📄 lLocal LLM Inference & Comparison
+## 📄 Local LLM Inference & Comparison
 This project demonstrates the implementation of local Large Language Model (LLM) inference using **Ollama**. The goal was to compare the performance and output quality of Google's **Gemma 3** and Meta's **Llama 3.2** when running offline on local hardware.
 
 This approach is critical for "Edge AI" applications where data privacy is required or internet connectivity is unavailable.
