@@ -1,6 +1,6 @@
 # Picar X Robot - Assembly & Environment Setup
 
-## 📄 Project Overview
+## 📄 Project 1
 This project focuses on the initial hardware assembly, firmware configuration, and software environment setup for the SunFounder Picar X (v2.0). The goal was to establish a functional mobile robotics platform for future computer vision and autonomous driving tasks.
 
 ## 🔧 Hardware & Tools Used
