@@ -63,3 +63,39 @@ For an offline robotics assistant running on this specific edge hardware, **Llam
 ### 💻 How to Run
 1.  Install Ollama: `pip install ollama`
 2.  Run script: `python3 compare_models.py`
+
+# Project Final Autonomous Line Tracking & Obstacle Avoidance
+
+## 🎯 Project Goal
+To design a functional robotic application that demonstrates sensor fusion, autonomous navigation, and safety protocols using the Picar X platform.
+
+## ⚙️ System Architecture
+*   **Sensors (Perception):** 
+    *   3-Channel Grayscale Module (Line detection)
+    *   Ultrasonic Sensor (Time-of-flight distance measurement)
+*   **Actuators:** 
+    *   DC Gear Motors (Propulsion)
+    *   Servo Motor (Ackermann Steering)
+*   **Control Loop:** Python-based generic decision loop running at ~50Hz.
+
+## ✅ Meeting the Requirements
+
+### 1. Integration of Sensors & Actuators
+The system fuses data from the grayscale module (floor contrast) and ultrasonic sensor (environment depth) to modulate the voltage to the DC motors and the angle of the steering servo.
+
+### 2. Autonomous Navigation
+The robot utilizes a logic-based control algorithm to autonomously track a high-contrast trajectory (black line) without external remote control or human intervention.
+
+### 3. Real-Time Perception
+The control loop continually reads sensor values. The steering angle is adjusted dynamically based on lateral error (deviation from the line center) in real-time.
+
+### 4. Safe & Ethical Operation
+**Safety Implementation:** The code includes a priority interrupt for obstacle detection.
+*   **Logic:** `If distance < 15cm THEN Emergency Stop.`
+*   **Ethical Consideration:** This ensures the robot does not harm its environment, collide with pets/humans, or damage itself, prioritizing safety over mission completion.
+
+## 🚀 How to Run
+```bash
+sudo python3 patrol.py
+```
+*(Sudo is often required for GPIO access on Pi)*
