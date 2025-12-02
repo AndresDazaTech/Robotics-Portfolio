@@ -5,7 +5,7 @@ This project focuses on the initial hardware assembly, firmware configuration, a
 
 ### 🔧 Hardware & Tools Used
 *   **Robot Kit:** SunFounder Picar X (v2.0)
-*   **Controller:** Raspberry Pi (3/4)
+*   **Controller:** Raspberry Pi 5
 *   **OS:** Raspberry Pi OS (Legacy/Bullseye recommended for camera compatibility)
 *   **Language:** Python 3
 
@@ -13,7 +13,7 @@ This project focuses on the initial hardware assembly, firmware configuration, a
 1.  **Assembly:** Constructed the chassis, servo motors, and camera module following the mechanical schematics.
 2.  **Environment Configuration:**
     *   Enabled I2C, SPI, and Camera interfaces via `raspi-config`.
-    *   Installed required dependencies (`ezblock` or `robot_hat` libraries).
+    *   Installed required dependencies (`Python` or `robot_hat` libraries).
 3.  **Calibration:**
     *   Performed servo zeroing to ensure wheel alignment.
     *   Calibrated the grayscale sensor for line tracking capabilities.
