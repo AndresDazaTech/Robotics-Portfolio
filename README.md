@@ -30,9 +30,8 @@ The setup process utilized the official documentation and community guides:
 *   ![My Picar X](IMG_6796.HEIC)
 
 
-## Project 2:
+## Project 2: Local LLM Inference & Comparison
 
-### 📄 Local LLM Inference & Comparison
 This project implements a local inference engine using **Ollama** to run Large Language Models (LLMs) offline. The goal was to benchmark different models to see which is most efficient for a robotics assistant (specifically for Picar X technical support).
 
 ### 🔍 The Experiment
